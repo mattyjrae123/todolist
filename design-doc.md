@@ -1,7 +1,18 @@
 # Design Document
 
+## UI
+
+
+
+## Data Model
+
+For convenience the app will use H2 database (Java embedded SQL database), meaning the data will be lost on shutdown. Eventually I want to implement basic authentication/authorisation.
+
+![ERD](/ERD.png)
+
 ## API Contracts
 
+<pre>
 Request
   URI: /
   HTTP Verb: GET
@@ -11,7 +22,7 @@ Response:
   Type: HTML
   Status:
     200 OK if resource is found
-    404 NOT FOUND if resource is not found
+    404 NOT FOUND if resource isn't found
   Example:
   &lt;!DOCTYPE html>
   &lt;html>
@@ -22,9 +33,16 @@ Response:
     &lt;h1>Hello, World!&lt;/h1>
     &lt;/body>
   &lt;/html>
+</pre>
 
-## Data Model
+<pre>
+Request
+  URI:
+  HTTP VERB:
+  Body:
 
-For convenience the app will use H2 database (Java embedded SQL database), meaning the data will be lost on shutdown.
-
-![ERD](/ERD.png)
+Response
+  Type:
+  Status:
+  Example:
+</pre>
