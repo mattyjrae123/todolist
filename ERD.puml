@@ -1,0 +1,26 @@
+@startuml
+entity user {
+  *id : number <<generated>>
+  --
+  *name : text
+}
+
+entity todo_list {
+  *id : number <<generated>>
+  --
+  *position : number
+  *title : text
+  *user_id : number <<FK>>
+}
+
+entity todo {
+  *id : number <<generated>>
+  --
+  *position : number
+  *content : text
+  *complete : boolean
+  *todo_list_id : number <<FK>>
+}
+
+user ||--o{ todo_list
+todo_list ||--o{ todo
