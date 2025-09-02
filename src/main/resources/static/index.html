@@ -9,14 +9,14 @@
 </head>
 <body>
   <div id="parent-container">
-    <nav>
-      <h2>My Lists</h2>
-      <ul id="list-selector">
-        <li>Work</li>
-        <li>Personal</li>
-        <li>Shopping</li>
+    <nav id="todo-list-nav">
+      <h2 id="todo-list-nav-header">My Lists</h2>
+      <ul id="todo-list-selector">
+        <li class="todo-list-selector-item">Work</li>
+        <li class="todo-list-selector-item">Personal</li>
+        <li class="todo-list-selector-item">Shopping</li>
       </ul>
-      <button>+ New List</button>
+      <button id="new-list-button">+ New List</button>
     </nav>
     <main>
       <h2>Work</h2>
@@ -24,15 +24,15 @@
         <input type="text" placeholder="Add a new task...">
         <input type="submit" value="Add">
       </form>
-      <ul>
-        <li>
+      <ul id="todo-items">
+        <li class="todo-item">
           <label>
             <input type="checkbox" name="" id="">
             Finish project work
           </label>
           <button>X</button>
         </li>
-        <li>
+        <li class="todo-item">
           <label>
             <input type="checkbox" name="" id="">
             Reply to emails
