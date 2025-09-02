@@ -64,6 +64,15 @@ body {
   height: 100%;
   padding: 0 1rem 0.5rem 1rem;
   width: 100%;
+
+  /* remove scrollbar */
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* Internet Explorer */
+  scrollbar-width: none;  /* Firefox, Safari, Chrome */
+}
+
+#todo-list-selector::-webkit-scrollbar-track {
+  display: none;
 }
 
 .todo-list-selector-item {
@@ -166,6 +175,11 @@ main {
   flex-direction: column;
   justify-content: start;
   gap: 1rem;
+
+  /* remove scrollbar */
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* Internet Explorer */
+  scrollbar-width: none;  /* Firefox, Safari, Chrome */
 }
 
 .todo-item {
@@ -176,6 +190,8 @@ main {
   display: flex;
   align-items: center;
   padding: 0 0.5rem;
+
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .todo-item > label {
