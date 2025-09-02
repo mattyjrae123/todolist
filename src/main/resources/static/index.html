@@ -8,6 +8,39 @@
   <title>Todo List</title>
 </head>
 <body>
-  <h1>Hello, World!</h1>
+  <div id="parent-container">
+    <nav>
+      <h2>My Lists</h2>
+      <ul id="list-selector">
+        <li>Work</li>
+        <li>Personal</li>
+        <li>Shopping</li>
+      </ul>
+      <button>+ New List</button>
+    </nav>
+    <main>
+      <h2>Work</h2>
+      <form id="new-task-form">
+        <input type="text" placeholder="Add a new task...">
+        <input type="submit" value="Add">
+      </form>
+      <ul>
+        <li>
+          <label>
+            <input type="checkbox" name="" id="">
+            Finish project work
+          </label>
+          <button>X</button>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="" id="">
+            Reply to emails
+          </label>
+          <button>X</button>
+        </li>
+      </ul>
+    </main>
+  </div>
 </body>
 </html>
