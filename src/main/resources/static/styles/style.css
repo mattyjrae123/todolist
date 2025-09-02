@@ -70,12 +70,20 @@ body {
   margin-top: 0.5rem;
   font-size: 2rem;
   padding: 0.25rem 1rem;
-
+  width: 100%;
+  text-align: start;
+  border: 0;
   border-radius: 0.5rem;
+
+  background-color: inherit;
 }
 
 .todo-list-selector-item:hover {
   background-color: rgb(80, 140, 255);
+}
+
+.todo-list-selector-item:active {
+  background-color: rgb(0, 0, 255);
 }
 
 .selected {
