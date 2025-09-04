@@ -1,16 +1,18 @@
 const View = (() => {
   const setLists = (lists) => {
+    // create <li> elements
     const listArr = lists.lists.map(list => {
       const btn = document.createElement("button");
       btn.classList.add("todo-list-selector-item");
       btn.textContent = list.title;
     
-      const li = document.createElement("list");
+      const li = document.createElement("li");
       li.appendChild(btn);
 
       return li;
     });
 
+    // append <li> elements
     const parent = document.querySelector("#todo-list-selector");
     listArr.forEach(element => {
       parent.appendChild(element);
@@ -19,9 +21,36 @@ const View = (() => {
   }
 
   const setTodos = (todos) => {
-    console.log(todos);
+    // create <li> elements
+    const todosArr = todos.list.map(todo => {
+      const input = document.createElement("input");
+      input.type = "checkbox";
+
+      const label = document.createElement("label");
+      label.appendChild(input);
+      label.appendChild(document.createTextNode(todo.content));
+
+      const li = document.createElement("li");
+      li.classList.add("todo-item");
+
+      const btn = document.createElement("button");
+      btn.textContent = "X";
+
+      li.appendChild(label);
+      li.appendChild(btn);
+
+      return li;
+    });
+
+    // append <li> elements
+    const parent = document.querySelector("#todo-items");
+    console.log(todosArr);
+
+    todosArr.forEach(todo => {
+      parent.appendChild(todo);
+    });
   };
-  
+
   return {
     setLists,
     setTodos
