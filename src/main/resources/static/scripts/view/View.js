@@ -17,8 +17,14 @@ const View = (() => {
     });
 
   }
+
+  const setTodos = (todos) => {
+    console.log(todos);
+  };
+  
   return {
-    setLists
+    setLists,
+    setTodos
   }
 })();
 

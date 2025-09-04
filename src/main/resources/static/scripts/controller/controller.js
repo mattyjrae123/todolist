@@ -8,7 +8,7 @@ const Controller = (() => {
     View.setLists(lists);
 
     const todos = Model.getTodos();
-    console.log(todos);
+    View.setTodos(todos);
   }
 
   return {
