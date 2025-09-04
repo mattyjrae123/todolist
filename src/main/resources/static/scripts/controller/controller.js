@@ -6,6 +6,9 @@ const Controller = (() => {
     console.log("Hello, from Controller.start()");
     const lists = Model.getLists();
     View.setLists(lists);
+
+    const todos = Model.getTodos();
+    console.log(todos);
   }
 
   return {

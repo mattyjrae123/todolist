@@ -19,8 +19,32 @@ const Model = (() => {
     return testList;
   }
 
+  const getTodos = (listId) => {
+    const testTodos = {
+      list: [
+        {
+          id: 5,
+          position: 0,
+          content: "1x tin cat food",
+          complete: true,
+          todo_list_id: 11
+        },
+        {
+          id: 88,
+          position: 1,
+          content: "2x 500g Butter",
+          complete: false,
+          todo_list_id: 11
+        }
+      ]
+    };
+
+    return testTodos;
+  }
+
   return {
-    getLists
+    getLists,
+    getTodos
   }
 })();
 
