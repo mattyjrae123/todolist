@@ -4,8 +4,8 @@ import View from "../view/View.js";
 const Controller = (() => {
   const run = () => {
     console.log("Hello, from Controller.start()");
-    Model.start();
-    View.start();
+    const lists = Model.getLists();
+    console.log(lists);
   }
 
   return {
