@@ -5,7 +5,7 @@ const Controller = (() => {
   const run = () => {
     console.log("Hello, from Controller.start()");
     const lists = Model.getLists();
-    console.log(lists);
+    View.setLists(lists);
   }
 
   return {
