@@ -1,7 +1,7 @@
 const View = (() => {
   const setLists = (lists) => {
     // create <li> elements
-    const listArr = lists.lists.map(list => {
+    const listArr = lists.map(list => {
       const btn = document.createElement("button");
       btn.classList.add("todo-list-selector-item");
       btn.textContent = list.title;

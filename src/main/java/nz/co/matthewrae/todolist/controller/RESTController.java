@@ -24,7 +24,6 @@ public class RESTController {
     List<TodoList> todoLists = jdbcTemplate.query("SELECT * FROM todo_list ORDER BY position",
       (rs, rowNum) -> new TodoList(rs.getInt("id"), rs.getInt("position"), rs.getString("title"), rs.getInt("account_id")));
 
-    todoLists.forEach(list -> System.out.println(list));
     return todoLists;
   }
   
