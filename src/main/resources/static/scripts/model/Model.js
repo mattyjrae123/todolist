@@ -1,22 +1,24 @@
 const Model = (() => {
-  const getLists = () => {
-    const testList = 
-      [
+  const getLists = async () => {
+    const URL = "/lists";
+    let result;
+    try {
+      const response = await fetch(URL, 
         {
-          id: 5,
-          position: 0,
-          title: "Morning checklist",
-          account_id: 101
-        },
-        {
-          id: 11,
-          position: 1,
-          title: "Supermarket",
-          account_id: 43
+          method: "GET"
+        });
+
+        if (!response.ok) {
+          throw new Error("Response status: "  + response.status);
         }
-      ]
-    
-    return testList;
+
+        result = await response.json();
+
+    } catch (error) {
+      console.error(error.message);
+    }
+
+    return result;
   }
 
   const getTodos = (listId) => {
