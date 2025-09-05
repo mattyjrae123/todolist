@@ -14,7 +14,7 @@ CREATE TABLE todo_list (
 );
 
 CREATE TABLE todo (
-  id int,
+  id int AUTO_INCREMENT,
   position int NOT NULL,
   content varchar(255) NOT NULL,
   complete boolean NOT NULL,
