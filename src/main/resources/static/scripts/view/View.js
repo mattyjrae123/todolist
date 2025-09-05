@@ -44,7 +44,6 @@ const View = (() => {
 
     // append <li> elements
     const parent = document.querySelector("#todo-items");
-    console.log(todosArr);
 
     todosArr.forEach(todo => {
       parent.appendChild(todo);
