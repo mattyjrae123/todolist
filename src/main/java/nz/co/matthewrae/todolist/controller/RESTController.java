@@ -34,7 +34,6 @@ public class RESTController {
   public List<Todo> getTodosByListId(@PathVariable int id) {
     List<Todo> todos = jdbcTemplate.query("SELECT * FROM todo WHERE todo_list_id=? ORDER BY position",
       (rs, rowNum) -> new Todo(rs.getInt("id"), rs.getInt("position"), rs.getString("content"), rs.getBoolean("complete"), rs.getInt("todo_list_id")), id);
-    System.out.println(todos);
   
     return todos;
   }

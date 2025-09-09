@@ -22,7 +22,7 @@ const View = (() => {
 
   const setTodos = (todos) => {
     // create <li> elements
-    const todosArr = todos.list.map(todo => {
+    const todosArr = todos.map(todo => {
       const input = document.createElement("input");
       input.type = "checkbox";
 

@@ -6,7 +6,7 @@ const Controller = (() => {
     const lists = await Model.getLists();
     View.setLists(lists);
 
-    const todos = Model.getTodos();
+    const todos = await Model.getTodos(1);
     View.setTodos(todos);
   }
 
