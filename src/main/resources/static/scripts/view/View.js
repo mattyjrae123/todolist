@@ -45,11 +45,7 @@ const View = (() => {
     });
 
     // append <li> elements
-    const parent = document.querySelector("#todo-items");
-
-    todosArr.forEach(todo => {
-      parent.appendChild(todo);
-    });
+    document.querySelector("#todo-items").replaceChildren(...todosArr);
   };
 
   return {

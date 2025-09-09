@@ -15,7 +15,7 @@ const Controller = (() => {
 
   const _selectListHandler = async (listId) => {
     const todos = await Model.getTodos(listId);
-    console.log(todos);
+    View.setTodos(todos);
   }
 
   return {
