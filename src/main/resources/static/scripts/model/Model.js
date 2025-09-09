@@ -44,7 +44,7 @@ const Model = (() => {
   }
 
   const deleteTodos = async (todoIds) => {
-    console.log("Model.deleteTodos called with params: " + todoIds);
+    console.log(`Model.deleteTodos called with todoId: ${todoIds}`);
   }
 
   return {

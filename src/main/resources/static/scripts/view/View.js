@@ -38,7 +38,7 @@ const View = (() => {
       const btn = document.createElement("button");
       btn.textContent = "X";
 
-      btn.addEventListener('click', () => deleteTodoButtonHandler(todo.id));
+      btn.addEventListener('click', () => deleteTodoButtonHandler(todo.id, todo.todo_list_id));
 
       li.appendChild(label);
       li.appendChild(btn);
