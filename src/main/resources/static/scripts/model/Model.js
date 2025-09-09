@@ -43,9 +43,14 @@ const Model = (() => {
     return result;
   }
 
+  const deleteTodos = async (todoIds) => {
+    console.log("Model.deleteTodos called with params: " + todoIds);
+  }
+
   return {
     getLists,
-    getTodos
+    getTodos,
+    deleteTodos
   }
 })();
 

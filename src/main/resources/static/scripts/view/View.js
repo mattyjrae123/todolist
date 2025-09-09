@@ -22,7 +22,7 @@ const View = (() => {
 
   }
 
-  const setTodos = (todos) => {
+  const setTodos = (todos, deleteTodoButtonHandler) => {
     // create <li> elements
     const todosArr = todos.map(todo => {
       const input = document.createElement("input");
@@ -37,6 +37,8 @@ const View = (() => {
 
       const btn = document.createElement("button");
       btn.textContent = "X";
+
+      btn.addEventListener('click', () => deleteTodoButtonHandler(todo.id));
 
       li.appendChild(label);
       li.appendChild(btn);
