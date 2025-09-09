@@ -1,10 +1,12 @@
 const View = (() => {
-  const setLists = (lists) => {
+  const setLists = (lists, buttonClickHandler) => {
     // create <li> elements
     const listArr = lists.map(list => {
       const btn = document.createElement("button");
       btn.classList.add("todo-list-selector-item");
       btn.textContent = list.title;
+
+      btn.addEventListener('click', () => buttonClickHandler(list.id))
     
       const li = document.createElement("li");
       li.appendChild(btn);

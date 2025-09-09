@@ -6,11 +6,16 @@ const Controller = (() => {
     const lists = await Model.getLists();
 
     if (lists.length > 0) {
-      View.setLists(lists);
+      View.setLists(lists, _selectListHandler);
       
       const todos = await Model.getTodos(lists[0].id);
       View.setTodos(todos);
     }
+  }
+
+  const _selectListHandler = async (listId) => {
+    const todos = await Model.getTodos(listId);
+    console.log(todos);
   }
 
   return {
