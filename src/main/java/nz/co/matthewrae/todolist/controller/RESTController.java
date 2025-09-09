@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.RestController;
 
+import nz.co.matthewrae.todolist.domain.Todo;
 import nz.co.matthewrae.todolist.domain.TodoList;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,9 +32,12 @@ public class RESTController {
   }
 
   @GetMapping("/lists/{id}")
-  public String getTodosByListId(@PathVariable int id) {
-    System.out.println("id: " + id);
-      return new String();
+  public List<Todo> getTodosByListId(@PathVariable int id) {
+    List<Todo> todos = jdbcTemplate.query("SELECT * FROM todo WHERE todo_list_id=?",
+      (rs, rowNum) -> new Todo(rs.getInt("id"), rs.getInt("position"), rs.getString("content"), rs.getBoolean("complete"), rs.getInt("todo_list_id")), id);
+    System.out.println(todos);
+  
+    return todos;
   }
   
   
