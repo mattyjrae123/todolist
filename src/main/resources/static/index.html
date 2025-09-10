@@ -15,7 +15,11 @@
       <h2 id="todo-list-nav-header">My Lists</h2>
       <ul id="todo-list-selector">
       </ul>
-      <button id="new-list-button">+ New List</button>
+      <form id="new-list-form" onsubmit="return false">
+        <input id="new-list-input" type="text" placeholder="Add a new list...">
+        <button id="new-list-button">Add</button>
+      </form>
+      <!-- <button id="new-list-button">+ New List</button> -->
     </nav>
     <main>
       <h2 id="todo-list-header">Work</h2>
