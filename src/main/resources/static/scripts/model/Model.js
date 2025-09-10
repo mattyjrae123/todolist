@@ -43,8 +43,18 @@ const Model = (() => {
     return result;
   }
 
-  const deleteTodos = async (todoIds) => {
-    console.log(`Model.deleteTodos called with todoId: ${todoIds}`);
+  const deleteTodos = async (todoId) => {
+    const URL = `/lists/todo/${todoId}`;
+
+    try {
+      const response = await fetch(URL, {method: "DELETE"});
+
+        if (!response.ok) {
+          throw new Error("Response status: "  + response.status);
+        }
+    } catch (error) {
+      console.error(error.message);
+    }
   }
 
   return {

@@ -43,9 +43,9 @@ public class RESTController {
     return todos;
   }
 
-  @DeleteMapping("/lists/todo")
-  public ResponseEntity<Void> deleteTodos(@RequestParam List<Integer> ids) {
-    jdbcTemplate.update("DELETE FROM todo WHERE id IN (:ids)", ids);
+  @DeleteMapping("/lists/todo/{id}")
+  public ResponseEntity<Void> deleteTodos(@PathVariable int id) {
+    jdbcTemplate.update("DELETE FROM todo WHERE id=?", id);
     return ResponseEntity.noContent().build();
   }
   

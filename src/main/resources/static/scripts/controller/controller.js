@@ -18,8 +18,8 @@ const Controller = (() => {
     View.setTodos(todos, _deleteTodoButtonHandler);
   }
 
-  const _deleteTodoButtonHandler = async (todoIds, listId) => {
-    Model.deleteTodos(todoIds);
+  const _deleteTodoButtonHandler = async (todoId, listId) => {
+    await Model.deleteTodos(todoId);
 
     const todos = await Model.getTodos(listId);
     View.setTodos(todos, _deleteTodoButtonHandler);
