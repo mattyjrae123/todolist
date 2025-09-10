@@ -15,7 +15,7 @@ const Controller = (() => {
 
   const _selectListHandler = async (listId) => {
     const todos = await Model.getTodos(listId);
-    View.setTodos(todos);
+    View.setTodos(todos, _deleteTodoButtonHandler);
   }
 
   const _deleteTodoButtonHandler = async (todoIds, listId) => {
